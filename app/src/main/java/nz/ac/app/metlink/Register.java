@@ -125,12 +125,7 @@ public class Register extends AppCompatActivity  {
         });
     }
 
-    public void CheckPermissionCW(View view) {
-        if(checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)==PackageManager.PERMISSION_GRANTED) {
 
-        }
-
-    }
     //Camera Permission
     public void takePhoto(View view) {
         if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
