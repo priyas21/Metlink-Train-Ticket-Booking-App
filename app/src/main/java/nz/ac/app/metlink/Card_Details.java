@@ -1,14 +1,18 @@
 package nz.ac.app.metlink;
 
+import android.*;
+import android.Manifest;
 import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.provider.Telephony;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,6 +51,7 @@ public class Card_Details extends AppCompatActivity implements View.OnClickListe
     int flag;
     AlertDialog.Builder alertDialog;
     String Card_url="http://tranzmetrometlink.com/PassengerBookingDetails.php";
+    private final static int SMS_CODE =1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -278,8 +283,9 @@ public class Card_Details extends AppCompatActivity implements View.OnClickListe
                                     status=1;
 
                                 } else {
+                                    CheckSmsPermission();
                                     DialogStatus = "Payment Successfull..An SMS has been sent on your mobile number regarding Ticket Details...Thanks for taking Metlink Services!!!!";
-                                    status = 2;
+                                   // status = 2;
 
 
                                 }
@@ -322,7 +328,7 @@ public class Card_Details extends AppCompatActivity implements View.OnClickListe
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog,int which) {
-
+                            CheckSmsPermission();
                             dialog.dismiss();
                             if(status==2)
                             {
@@ -364,6 +370,37 @@ public class Card_Details extends AppCompatActivity implements View.OnClickListe
 
         }
     }
+
+    private void CheckSmsPermission() {
+        if(checkSelfPermission(Manifest.permission.SEND_SMS)== PackageManager.PERMISSION_GRANTED) {
+           status = 2;
+        }
+        else {
+            String[] permissionRequested = {Manifest.permission.SEND_SMS};
+            requestPermissions(permissionRequested,SMS_CODE );
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if(requestCode == SMS_CODE) {
+            if(grantResults[0]== PackageManager.PERMISSION_GRANTED) {
+                status = 2;
+            }
+            else {
+                Toast.makeText(this, "Sms permission was not granted. Cannot send Ticket as sms" , Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Card_Details.this, ViewTicket.class);
+                Bundle extras=new Bundle();
+                extras.putString("Email",Email_string);
+                extras.putString("Mobile",MobileNum);
+                intent.putExtras(extras);
+                startActivity(intent);
+                clearInput();
+                finish();
+            }
+        }
+    }
+
     // Reference: 30.	http://web.archive.org/web/20150303013635/http://mobiforge.com/design-development/sms-messaging-android
     public void sendSMS()
     {
