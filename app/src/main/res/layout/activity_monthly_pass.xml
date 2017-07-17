@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="nz.ac.app.metlink.MonthlyPass">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:id="@+id/homeimg"
+        android:onClick="backClicked"
+        />
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="160dp"
+        android:id="@+id/imageLogo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/logo1"
+        android:paddingTop="2dp"
+        android:paddingBottom="100dp"
+        android:layout_marginRight="50dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/star"
+        android:paddingRight="55dp"
+        android:id="@+id/imageView" />
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:text="You Chose Monthly Pass of Month :"
+        android:id="@+id/textViewTicket"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageLogo"
+        android:layout_marginTop="-80dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/thumbsup"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/imageView4"
+        android:onClick="thumbsupClick"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:id="@+id/imagestar"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="135dp"
+        android:src="@drawable/redstar"
+        android:layout_above="@+id/textViewTitle"
+        android:layout_toEndOf="@+id/textViewTitle" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Required Fields"
+        android:id="@+id/textViewReq"
+        android:paddingLeft="40dp"
+        android:layout_below="@+id/homeimg"
+        android:layout_toEndOf="@+id/homeimg"
+        android:layout_marginTop="90dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Month"
+        android:id="@+id/textViewMonth"
+        android:layout_below="@+id/imagestar"
+        android:textSize="25sp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerMonth"
+        android:layout_below="@+id/imageLogo"
+        android:layout_centerHorizontal="true"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="25dp"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView8"
+        android:src="@drawable/ticket"
+        android:layout_alignTop="@+id/spinnerMonth"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fare"
+        android:textSize="25sp"
+        android:id="@+id/textViewFare"
+        android:layout_below="@+id/imageView8"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextFare"
+        android:layout_below="@+id/imageView8"
+        android:layout_alignStart="@+id/imagestar"
+        android:layout_alignEnd="@+id/spinnerMonth"
+        android:layout_marginLeft="40dp"
+        android:layout_above="@+id/buttonPay"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+        android:id="@+id/buttonPay"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imagestar"
+        android:onClick="btnPayClicked"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay Via PayPal"
+        android:id="@+id/buttonPaypal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextmonth"
+        android:layout_alignBottom="@+id/textViewTicket"
+        android:layout_alignStart="@+id/imageView8"
+        android:layout_toStartOf="@+id/imageView4"
+        android:layout_marginLeft="20dp"/>
+
+</RelativeLayout>

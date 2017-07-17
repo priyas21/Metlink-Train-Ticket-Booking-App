@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="nz.ac.app.metlink.Register"
+    >
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home"
+        android:id="@+id/homeimg"
+        android:onClick="homeClicked"
+        />
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="160dp"
+        android:id="@+id/imageLogo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/logo1"
+        android:paddingTop="2dp"
+        android:paddingBottom="100dp"
+        android:layout_marginRight="60dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/star"
+        android:paddingRight="53dp"
+        android:id="@+id/imageView" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/thumbsup"
+        android:layout_marginLeft="25dp"
+        android:id="@+id/imageView4"
+        android:onClick="thumbsupClick"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" All Fields are Required"
+        android:id="@+id/textViewReq"
+        android:paddingLeft="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryText"
+        android:layout_above="@+id/spinnerTitle"
+        android:layout_alignEnd="@+id/ivimage" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagestar"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/redstar"
+        android:layout_above="@+id/editTextFirst"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:id="@+id/textViewTitle"
+        android:layout_alignBottom="@+id/imageLogo"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:fontFamily="serif"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/buttonMobileChg"
+        android:onClick="buttonRegisterClicked"
+        android:layout_below="@+id/textViewCamera"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="Enter First name"
+        android:ems="10"
+        android:id="@+id/editTextFirst"
+        android:layout_below="@+id/imageLogo"
+        android:layout_alignParentStart="true"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="Enter Last Name"
+        android:ems="10"
+        android:id="@+id/editTextLast"
+        android:layout_below="@+id/editTextFirst"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerTitle"
+        android:layout_marginBottom="8dp"
+        android:entries="@array/Title_Names"
+        android:layout_alignBottom="@+id/imageLogo"
+        android:layout_toEndOf="@+id/imagestar" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:hint="Enter Mobile Phone"
+        android:id="@+id/editTextMobile"
+        android:layout_below="@+id/editTextLast"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:hint="Enter Email Address"
+        android:id="@+id/editTextEmail"
+        android:layout_below="@+id/editTextMobile"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:hint="Enter Password"
+        android:id="@+id/editTextPass"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password must be 6 to 8 characters long"
+        android:layout_below="@+id/editTextPass"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:hint="Confirm password"
+        android:id="@+id/editTextConfirmPass"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewcamera"
+        android:src="@drawable/camera"
+        android:layout_alignTop="@+id/imageViewGallery"
+        android:layout_alignParentStart="true"
+        android:onClick="takePhoto"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewGallery"
+        android:src="@drawable/gallery"
+        android:layout_below="@+id/editTextConfirmPass"
+        android:layout_toEndOf="@+id/imagestar"
+        android:onClick="selectPhotoFromGallery"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Optional)"
+        android:id="@+id/textView11"
+        android:layout_above="@+id/buttonMobileChg"
+        android:layout_toStartOf="@+id/imageView4" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        android:id="@+id/textViewCamera"
+        android:layout_below="@+id/imageViewcamera"
+        android:layout_alignStart="@+id/imageViewcamera" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        android:id="@+id/textViewGallery"
+        android:layout_below="@+id/imageViewGallery"
+        android:layout_alignStart="@+id/imageViewGallery" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:id="@+id/buttonupload"
+        android:layout_above="@+id/textView11"
+        android:layout_marginLeft="180dp"
+
+         />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/ivimage"
+
+        android:layout_below="@+id/homeimg"
+        android:layout_toStartOf="@+id/textView11"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+
+
+
+</RelativeLayout>

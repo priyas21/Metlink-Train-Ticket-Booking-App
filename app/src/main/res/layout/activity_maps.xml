@@ -1,0 +1,79 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/TFaddress" />
+
+    <Button
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/buttonSearch"
+        android:layout_gravity="right"
+        android:onClick="onSearch"
+        android:background="@color/colorPrimaryText"
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite"  />
+    <Button
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:text="Change Map Type"
+        android:id="@+id/buttonMapType"
+        android:layout_gravity="right"
+        android:onClick="changeType"
+        android:background="@color/colorPrimaryLight"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        android:textColorHighlight="@color/colorWhite"
+        android:textColor="@color/colorPrimaryText"/>
+</LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="320dp"
+    android:layout_height="621dp"
+    tools:context="nz.ac.app.metlink.MapsActivity" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="^"
+            android:textSize="25sp"
+            android:id="@+id/Bzoomin"
+            android:layout_gravity="right"
+            android:onClick="onZoom"
+            />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="v"
+            android:id="@+id/Bzoomout"
+            android:layout_gravity="right"
+            android:onClick="onZoom"/>
+
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

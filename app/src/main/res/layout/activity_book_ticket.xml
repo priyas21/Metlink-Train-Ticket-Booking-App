@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="nz.ac.app.metlink.BookTicket">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home"
+        android:id="@+id/homeimg"
+        android:onClick="homeClicked"
+        />
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="160dp"
+        android:id="@+id/imageLogo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/logo1"
+        android:paddingTop="2dp"
+        android:paddingBottom="100dp"
+        android:layout_marginRight="45dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/star"
+        android:paddingRight="55dp"
+        android:id="@+id/imageView" />
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Book Your Ticket"
+        android:id="@+id/textViewTicket"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageLogo"
+        android:layout_marginTop="-95dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/thumbsup"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/imageView4"
+        android:onClick="thumbsupClick"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" All Fields are Required"
+        android:id="@+id/textViewReq"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/homeimg"
+        android:layout_toEndOf="@+id/homeimg"
+        android:layout_marginTop="45dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryText"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagestar"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/redstar"
+        android:layout_above="@+id/textViewTitle"
+        android:layout_toEndOf="@+id/textViewTitle" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="Train Line"
+        android:id="@+id/textViewTrainLine"
+        android:textSize="17sp"
+        android:fontFamily="serif"
+        android:layout_below="@+id/imagestar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-13dp"/>
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="Source"
+        android:id="@+id/textViewStation"
+        android:textSize="17sp"
+        android:fontFamily="serif"
+        android:layout_above="@+id/spinnerDest"
+        android:layout_alignParentStart="true"
+        />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="Destination"
+        android:id="@+id/textViewDest"
+        android:textSize="17sp"
+        android:fontFamily="serif"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textViewStation" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="Passenger"
+        android:id="@+id/textViewPass"
+        android:textSize="17sp"
+        android:fontFamily="serif"
+        android:layout_below="@+id/textViewDest"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerPassenType"
+        android:spinnerMode="dropdown"
+        android:entries="@array/Passsenger_Type"
+        android:layout_marginLeft="140dp"
+        android:layout_alignTop="@+id/textViewPass"
+        android:layout_alignEnd="@+id/imageLogo" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="Ticket Type"
+        android:id="@+id/textViewTicketType"
+        android:textSize="17sp"
+        android:fontFamily="serif"
+        android:layout_below="@+id/textViewPass"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerTicketType"
+        android:spinnerMode="dropdown"
+        android:entries="@array/Ticket_Type"
+        android:layout_marginRight="15dp"
+        android:layout_alignStart="@+id/spinnerDest"
+        android:layout_alignEnd="@+id/spinnerDest"
+        android:layout_above="@+id/buttonInsert"
+        android:layout_alignTop="@+id/textViewTicketType" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/buttonNext"
+        style="?android:attr/buttonStyleInset"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textViewDest" />
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerTrainLine"
+        android:entries="@array/Train_Line"
+        android:layout_below="@+id/textViewReq"
+        android:layout_toEndOf="@+id/buttonInsert"
+        android:layout_alignStart="@+id/buttonInsert"
+        android:layout_above="@+id/textViewTicket"
+        android:layout_marginLeft="140dp"
+        android:layout_marginBottom="-10dp"/>
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:id="@+id/spinnerSource"
+        android:entries="@array/Source_Station"
+        android:spinnerMode="dropdown"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/textViewTrainLine"
+        android:layout_below="@+id/spinnerTrainLine"
+        android:layout_marginLeft="35dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerDest"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/spinnerSource"
+        android:layout_marginTop="10dp"
+        android:entries="@array/Destination_Station"
+        android:layout_alignStart="@+id/spinnerPassenType" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewSError"
+        android:layout_below="@+id/spinnerSource"
+        android:layout_toEndOf="@+id/textViewDest"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDError"
+        android:layout_below="@+id/spinnerDest"
+        android:layout_alignStart="@+id/textViewSError"
+           />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewEError"
+        android:layout_below="@+id/spinnerPassenType"
+        android:layout_alignStart="@+id/textViewSError"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewerrortrainline"
+        android:layout_below="@+id/spinnerTrainLine"
+        android:layout_alignStart="@+id/textViewSError"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewerrorT"
+        android:layout_below="@+id/spinnerTicketType"
+        android:layout_alignStart="@+id/textViewSError"
+
+        />
+
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nz.ac.app.metlink">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <permission
+        android:name="nz.ac.app.metlink.permissions.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="nz.ac.app.metlink.permissions.MAPS_RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x0020000"
+        android:required="true" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/logoicon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:label="Main Activity" />
+        <activity
+            android:name=".SplashScreen"
+            android:label="Metlink">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BookTicket"
+            android:label="Book ticket" />
+        <activity
+            android:name=".Login"
+            android:label="@string/Login" />
+        <activity
+            android:name=".Register"
+            android:label="@string/Register" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <!--
+            <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC3ZTGb-Cg7lZZL_ce5Y75SJRnlbSi5QSE" />
+        -->
+
+
+        <!--
+            <activity
+            android:name=".PlanJourney"
+            android:label="@string/title_activity_plan_journey" />
+        -->
+
+        <activity
+            android:name=".AdminLogin"
+            android:label="Admin Login" />
+        <activity android:name=".MonthlyPass" />
+        <activity android:name=".Fare_Enquiry" />
+        <activity android:name=".Card_Details" />
+        <activity android:name=".ViewTicket" />
+        <activity android:name=".My_Profile" />
+        <activity android:name=".Camera" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".BarcodeGeneratorActivity" />
+        <activity android:name=".ScanBarcode"></activity>
+    </application>
+
+</manifest>

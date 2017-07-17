@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="nz.ac.app.metlink.Login"
+    android:clickable="true">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home"
+        android:id="@+id/imgviewhome"
+        android:onClick="homeClicked"/>
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="160dp"
+        android:id="@+id/imageLogo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/logo1"
+        android:paddingTop="2dp"
+        android:paddingBottom="100dp"
+        android:layout_marginRight="25dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/star"
+        android:paddingRight="45dp"
+        android:id="@+id/imageViewStar" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/thumbsup"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/imageViewthumb"
+        android:onClick="thumbsupClick"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:id="@+id/textViewEmail"
+        android:layout_alignBottom="@+id/imageLogo"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        android:fontFamily="serif"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:id="@+id/textViewpsw"
+        android:layout_below="@+id/imageLogo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp"
+        android:textSize="20sp"
+        android:fontFamily="serif"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editTextEmail"
+        android:layout_alignTop="@+id/textViewEmail"
+        android:layout_alignEnd="@+id/imageLogo" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextPass"
+        android:layout_alignTop="@+id/textViewpsw"
+        android:layout_alignEnd="@+id/imageLogo" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:id="@+id/textViewSIgnIn"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginTop="67dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_toStartOf="@+id/editTextEmail"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:id="@+id/buttonSignIn"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/editTextPass"
+        android:layout_centerHorizontal="true"
+        style="?android:attr/buttonStyleInset"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:onClick="signIn"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="I&apos;ve forgotten my password"
+        android:id="@+id/textViewforgetPass"
+        android:layout_below="@+id/buttonSignIn"
+        android:layout_alignStart="@+id/textViewSIgnIn"
+        android:layout_marginTop="32dp"
+        android:layout_toStartOf="@+id/imageView4"
+        android:textColorHighlight="#ffffff"
+        android:textColorLink="#ffffff"
+        android:textColor="@color/colorLink"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Don&apos;t have account? Register for my Metlink Here"
+        android:id="@+id/textViewRegister"
+        android:layout_below="@+id/textViewforgetPass"
+        android:layout_marginTop="34dp"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorLink"
+        android:textStyle="italic"
+        android:onClick="RegisterLinkClicked"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/attempts"
+        android:layout_alignEnd="@+id/buttonSignIn"
+        android:layout_below="@+id/buttonSignIn"
+        android:layout_marginRight="105dp"/>
+
+
+</RelativeLayout>

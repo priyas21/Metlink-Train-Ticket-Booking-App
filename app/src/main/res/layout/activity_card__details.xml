@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="nz.ac.app.metlink.Card_Details">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:id="@+id/homeimg"
+        android:onClick="backClicked"
+        />
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="160dp"
+        android:id="@+id/imageLogo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/logo1"
+        android:paddingTop="2dp"
+        android:paddingBottom="100dp"
+        android:layout_marginRight="40dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/star"
+        android:paddingRight="55dp"
+        android:id="@+id/imageView" />
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Card Details"
+        android:id="@+id/textViewTicket"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageLogo"
+        android:layout_marginTop="-95dp"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/thumbsup"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/imageView4"
+        android:onClick="thumbsupClick"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" All Fields are Required"
+        android:id="@+id/textViewReq"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/homeimg"
+        android:layout_toEndOf="@+id/homeimg"
+        android:layout_marginTop="55dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryText"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagestar"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/redstar"
+        android:layout_above="@+id/textViewTitle"
+        android:layout_toEndOf="@+id/textViewTitle" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:text="Name on Card"
+        android:id="@+id/textViewName"
+        android:textSize="17sp"
+        android:fontFamily="serif"
+        android:layout_below="@+id/imagestar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"/>
+
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:text="Card Number"
+        android:id="@+id/textViewCardNum"
+        android:textSize="17sp"
+        android:fontFamily="serif"
+        android:layout_below="@+id/textViewName"
+        android:layout_marginTop="10dp"
+         />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="Expiry Date"
+        android:id="@+id/textViewExpiryDate"
+        android:textSize="17sp"
+        android:fontFamily="serif"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textViewCardNum" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="CVV"
+        android:id="@+id/textViewCVV"
+        android:textSize="17sp"
+        android:fontFamily="serif"
+        android:layout_below="@+id/textViewExpiryDate"
+        android:layout_marginTop="17dp"
+         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+        android:id="@+id/btnPayFare"
+        style="?android:attr/buttonStyleInset"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textViewReq" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewSError"
+        android:layout_toEndOf="@+id/textViewExpiryDate"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="-16dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/textViewReq" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDError"
+        android:layout_alignStart="@+id/textViewSError"
+
+        android:layout_alignTop="@+id/textViewCVV" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewEError"
+        android:layout_alignStart="@+id/textViewSError"
+        android:layout_marginTop="80dp"
+
+        android:layout_alignTop="@+id/textViewCVV" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewjson"
+        android:layout_alignStart="@+id/textViewSError"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/textViewReq" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Enter Name as on Card"
+        android:ems="10"
+        android:id="@+id/editTextName"
+        android:layout_alignBottom="@+id/textViewName"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/textViewExpiryDate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextCardNum"
+        android:layout_alignBottom="@+id/textViewCardNum"
+        android:layout_toEndOf="@+id/textViewCardNum"
+        android:hint="Enter 16 Digit Card Number"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile"
+        android:id="@+id/textViewMobile"
+        android:layout_above="@+id/btnPayFare"
+        android:textSize="19sp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/textViewCVV" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnermonth"
+        android:layout_alignBottom="@+id/textViewExpiryDate"
+        android:layout_alignEnd="@+id/textViewReq"
+        android:entries="@array/Month"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinneryear"
+        android:layout_alignTop="@+id/spinnermonth"
+        android:layout_alignEnd="@+id/imageLogo" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextCVV"
+        android:layout_alignTop="@+id/textViewDError"
+        android:layout_toEndOf="@+id/textViewCardNum"
+        android:hint="Enter 3 Digit CVV Num"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editTextMobile"
+        android:hint="Enter Mobile Number"
+        android:layout_alignTop="@+id/textViewMobile"
+        android:layout_toEndOf="@+id/textViewExpiryDate" />
+
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Metlink</string>
+    <string name="Login">LoginActivity</string>
+    <string name="Register">RegisterActivity</string>
+    <string name="title_activity_plan_journey">Map</string>
+    <string name="Train_Line">Select Train Line</string>
+
+
+    <string-array name="Title_Names">
+        <item>Mr</item>
+        <item>Mrs</item>
+        <item>Miss</item>
+    </string-array>
+
+    <string-array name="Passsenger_Type">
+        <item>Select Either Adult or Child</item>
+        <item>Adult</item>
+        <item>Child</item>
+    </string-array>
+    <string-array name="Train_Line">
+        <item>Select Train Line</item>
+    </string-array>
+    <string-array name="Source_Station">
+        <item>Select Source Station</item>
+    </string-array>
+    <string-array name="Destination_Station">
+        <item>Select Destination Station</item>
+    </string-array>
+    <string-array name="Ticket_Type">
+        <item>Select Ticket Type</item>
+        <item>Monthly Ticket</item>
+        <!--<item>Standard Ticket</item>-->
+    </string-array>
+    <string-array name="Month">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
